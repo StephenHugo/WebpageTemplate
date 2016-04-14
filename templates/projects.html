@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block body %}
+	
+	<div id="homepage">
+	<center><h1>Image Processing</h1>
+	<div id="nav2">	
+	<b>
+		<a href="{{ url_for('projects.index') }}">One set of filters</a>
+		- <a href="{{ url_for('projects.standard') }}">Another set of filters</a>
+	</b>
+</div>
+	</center>
+</div>
+
+	{% block types %}{% endblock %}
+
+{% endblock %}

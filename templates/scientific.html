@@ -1,0 +1,28 @@
+{% extends "projects.html" %}
+{% block types %}
+	
+	<div id="second"><center>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					{% block filterinfo %}{% endblock %}
+					
+				{% endfor %}
+			{% else %}
+				<center><div id="first">
+					<form>
+						<p>Try out some image processing using links to your own images
+						(something like <a href="http://zeiss-campus.magnet.fsu.edu/articles/probes/images/fpconsiderationsfigure1large.jpg">THIS</a>)!</p>
+						Please, enter an image url:
+						<input type="text" value="" name="link"><button type="submit" value="none" name="button" formmethod="post">Clear</button>
+						<br><br>
+						<button type="submit" value="hny" name="button" formmethod="post"><img src="/static/img/faceasf.jpg"><br>What is this?</button>
+						<button type="submit" value="varfilt" name="button" formmethod="post"><img src="/static/img/facevar.jpg"><br>Variance Filter</button>
+						
+						
+					</form>
+				</div></center>
+			{% endif %}
+		{% endwith %}
+	</center></div>
+{% endblock %}

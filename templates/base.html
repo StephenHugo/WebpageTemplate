@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PUT A TITLE HERE!</title>
+		<!-- the look and feel of the page is determined through css styles -->
+		<link rel="stylesheet" type="text/css" href="/static/style.css" />
+		
+		<!-- the code below let's you add an icon -->
+		<!-- <link rel="icon" href="/static/face.ico" type="image/icon"> -->
+		
+		<!-- this creates a header block in case you want to load javascript elements later on -->
+		{% block heady %}{% endblock %}
+		
+		<!-- Facebook code: let's you choose how facebook summarizes your page-->
+		<!--	<meta property="og:image" content="http://stephenhugo.herokuapp.com/static/img/face.jpg" /> -->
+		<!--	<meta property="og:title" content="Stephen Hugo Arce"/> -->
+		<!--	<meta property="og:description" content="A summary of my research, working image processing demos, and a listing of professional awards, publications and acknowledgements."/> -->
+		<!-- End Facebook -->
+	</head>
+	
+	<body>
+	<!-- use your own picture -->	
+	<a href="link to somewhere else, remove if you don't want a click-able picture"><img style="float:left" src="/static/img/face.jpg"></a>
+		
+		<!-- this creates a navigation menu at the top of the page -->
+		<div id="nav">	
+			<b>
+				<a href="{{ url_for('home.index') }}">Home</a>
+				- <a href="{{ url_for('research.index') }}">Research</a>
+				- <a href="{{ url_for('projects.index') }}">Projects</a>
+				- <a href="{{ url_for('home.publications') }}">Publications/Presentations</a>
+				- <a href="{{ url_for('home.honors') }}">Honors/Awards</a>
+				- <a href="{{ url_for('home.about') }}">About</a>
+			</b>
+		</div>
+		
+		
+		<!-- this let's you extend different html files and always use this file as a base page template -->
+		<div id="content">
+			{% block body %}{% endblock %}
+		</div>
+		
+	</body>
+</html>

@@ -1,0 +1,27 @@
+{% extends "projects.html" %}
+{% block types %}
+	
+	<div id="second"><center>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+				{% for message in messages %}
+					{% block filterinfo %}{% endblock %}
+					
+				{% endfor %}
+			{% else %}
+				<center><div id="first">
+					<form>
+						<p>This section allows you to try out some goofy image processing algorithms using links to your own images. <br>
+						Facebook images should work, or get one from <a href="https://www.flickr.com/explore/interesting/7days/">Flickr</a>!</p>
+						Please, enter an image url:
+						<input type="text" value="" name="link"><button type="submit" value="none" name="button" formmethod="post">Clear</button>
+						<br><br>
+						<button type="submit" value="highboost" name="button" formmethod="post"><img src="/static/img/facehb.jpg"><br>High boost filter</button>
+						<button type="submit" value="srtfilt" name="button" formmethod="post"><img src="/static/img/facesrt.jpg"><br>Sorting Filter</button>
+						
+					</form>
+				</div></center>
+			{% endif %}
+		{% endwith %}
+	</center></div>
+{% endblock %}

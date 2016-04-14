@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block body%}
+
+<div id="homepage">
+	<!-- watch out for misspelled words -->
+	<center><h1>Welome!</h1></center>
+</div>
+<div id="publication">
+	Talk about yourself!
+	<br><br>
+	Don't be shy.
+	
+	</center><br><br>Words.
+	<br><br>What are you doing these days?
+	<br><br><center>Here is a summary of each section of this website:</center>
+	
+		<p><a href="{{ url_for('research.index') }}">Research</a>: The major themes of my doctoral research are explained in this section.
+			I believe that the shape of migrating cells can tell us more than we think.</p>
+		<p><a href="{{ url_for('projects.index') }}">Projects</a>: Perform image processing on your own images using the power of Python, over the server!</p>
+		<p><a href="{{ url_for('home.publications') }}">Publications/Presentations</a>: My colleagues and I are continually working on new publications, but here are the completed products. 
+			I have presented my work several times as well, and am proud to have guided my recent undregraduate partners in presenting our joint work.</p>
+		<p><a href="{{ url_for('home.honors') }}">Honors and Awards</a>: This page acknowledges the support I received throughout my graduate life.</p>
+		<a href="{{ url_for('home.about') }}">About</a>: This is also a section.
+		
+</div>
+<br>
+<br>
+<div id="homepage">
+	<center><a href="#">Return to Top</a></center>
+</div>
+<br>
+<br>
+{% endblock %}

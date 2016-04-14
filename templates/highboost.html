@@ -1,0 +1,16 @@
+{% extends "standard.html" %}
+{% block filterinfo %}
+	
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages %}
+				<p id="publication">The loaded image was processed by a high boost filter. 
+					First, the input image is convolved by a 17x17 pixel disk kernel, then that result is subtracted from the original image.
+					Click to save or get a url to post this image elsewhere.<br>
+					<center><a href="#" onClick="history.go(-1);return true;">Would you like to try something different?</a></center></p>
+				<a href="/processed?link={{message}}"><img src="/processed?link={{message}}"></a>
+				
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+{% endblock %}

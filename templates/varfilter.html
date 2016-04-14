@@ -1,0 +1,25 @@
+{% extends "scientific.html" %}
+{% block filterinfo %}
+	
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+			{% for message in messages %}
+				<p id="publication">A variance filter returns the variance of pixel values within a certain neighborhood throughout the image.
+				The easiest implementation is to calculate the average of squared pixel values and subtract those from the average pixel values squared...
+				something like Average(I^2)-Average(I)^2, where I use a 5x5 Gaussian filter to average a neighborhood of pixels here.
+				The result looks interesting, but is also typically used to enhance edges in images of cell cultures or histology, providing a means to segment cells from the background.
+				</p>
+					<center><a href="#" onClick="history.go(-1);return true;">Would you like to try something different?</a></center><br>
+				<a href="/varfilt?link={{message}}"><img src="/varfilt?link={{message}}"></a>				
+					
+<br>
+<div id="homepage">
+	<center><a href="#">Return to Top</a></center>
+</div>
+<br>
+<br>
+				
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+{% endblock %}

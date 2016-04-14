@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block body%}
+
+<div id="homepage">
+	<center><h1>Research</h1>
+	<div id="nav2">	
+	<b>
+		<a href="{{ url_for('research.index') }}">Overview</a>
+		- <a href="{{ url_for('research.asf') }}">Research Topic #1</a>
+		- <a href="{{ url_for('research.migration') }}">Research Topic #2</a>
+	</b>
+</div>
+	</center>
+</div>
+
+	{% block topics %}{% endblock %}
+
+
+{% endblock %}

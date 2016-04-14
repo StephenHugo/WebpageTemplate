@@ -1,0 +1,137 @@
+body {
+	font-family: 'Georgia', serif;
+	color: rgb(20, 12, 28);
+	background: rgb(222, 238, 238);
+}
+
+#nav {
+	position: relative;
+	margin-top: 5px;
+	margin-left: 12px;
+	padding-left: 3px;
+	padding-right: 3px;
+	margin-right: auto;
+	display: inline-block;
+	background: rgb(202, 218, 218);
+	border: solid 1px rgb(20, 12, 28);
+}
+
+#nav2 {
+	position: relative;
+	margin-bottom: 12px;
+	padding-left: 3px;
+	padding-right: 3px;
+	display: inline-block;
+	background: rgb(202, 218, 218);
+	border: solid 1px rgb(20, 12, 28);
+}
+
+#nav a:link {
+	color: rgb(20, 12, 28);
+	text-decoration: none;
+}
+
+#nav a:hover {
+	color: rgb(238, 40, 42);
+	text-decoration: none;
+}
+
+#nav2 a:link {
+	color: rgb(20, 12, 28);
+	text-decoration: none;
+}
+
+#nav2 a:hover {
+	color: rgb(238, 40, 42);
+	text-decoration: none;
+}
+
+#aboutme {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 12px;
+	padding-right: 12px;
+	width: 65%;
+	text-align: justify;
+	background: rgb(202, 218, 218);
+}
+
+#publication {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 12px;
+	padding-right: 12px;
+	width: 65%;
+	text-align: justify;
+	background: rgb(202, 218, 218);
+}
+
+#authors {
+	padding-left: 24px;
+}
+
+#publication a{
+	padding-left: 12px;
+}
+
+#homepage {
+	margin-left: auto;
+	margin-right: auto;
+	width: 768px;
+	text-align: justify;	
+}
+
+#content {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	width: 90%;
+	text-align: justify;
+}
+
+#content a {
+	color: rgb(238, 40, 42);
+	text-decoration: none;
+}
+
+.board {
+	margin-left: auto;
+	margin-right: auto;
+	top: 5px;
+	left: 5px;
+}
+
+.clicked {
+
+}
+
+.board td {
+
+	width: 5px;
+	height: 5px;
+	background-color: #BBBBEE;
+}
+
+.board td.alive {
+	background-color: #CCEEDD;
+}
+
+button {
+	background: rgb(202, 218, 218);
+	color: rgb(238, 40, 42);
+	border: solid 1px #333;
+	display: inline;
+}
+
+#second img {
+	disply: inline;
+	border: solid 1px #FFF;
+}
+
+input {
+	margin-right: 5px;
+}
